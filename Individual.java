@@ -5,8 +5,8 @@ public class Individual{
 	private City[] path; 
 
 	//Constructor for an individual taking an array of cities as a path. This path is then scrambled so the cities appear in random order
-	public Individual(City[] cityarray){
-		path = cityarray.clone();
+	public Individual(City[] cityArray){
+		path = cityArray.clone();
 		int k = 1;
 		while(path.length-k > 0){
 			City temporary;
