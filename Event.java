@@ -48,4 +48,17 @@ public class Event{
 
         return ( "Event type: " + typ + "   Time: " + timeStamp  );
     }
+
+    //Override of equals
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Event other = (Event) o;
+        return ((this.type() == other.type()) && (this.time() == other.time()) && (this.individual() == other.individual()));
+    }
+
+    //Override of hashCode
+    public int hashCode() {
+        return Objects.hash(e, timeStamp, i);
+    }
 }

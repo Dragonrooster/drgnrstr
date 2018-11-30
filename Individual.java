@@ -70,4 +70,16 @@ public class Individual{
 		path[cityIndexTwo] = temporary;
 	}
 
+    //Override of equals
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Individual other = (Individual) o;
+        return (this.path() == other.path());
+    }
+
+    //Override of hashCode
+    public int hashCode() {
+        return Arrays.hashCode(path);
+    }
 }

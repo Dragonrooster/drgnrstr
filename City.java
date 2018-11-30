@@ -1,4 +1,5 @@
 import java.math.*;
+import java.util.Objects;
 
 public class City{
 
@@ -36,5 +37,20 @@ public class City{
 		
 		return dist;
 	}
+
+
+    //Override of equals
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        City other = (City) o;
+        return ((this.x() == other.x()) && (this.y() == (other.y()) && (this.name() == other.name()));
+    }
+
+    //Override of hashCode
+    public int hashCode() {
+
+        return Objects.hash(cityName, x, y);
+    }
 
 }
