@@ -44,7 +44,7 @@ public class City{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         City other = (City) o;
-        return ((this.x() == other.x()) && (this.y() == (other.y()) && (this.name() == other.name()));
+        return ((this.x() == other.x()) && (this.y() == (other.y()) && (this.name() == other.name())));
     }
 
     //Override of hashCode

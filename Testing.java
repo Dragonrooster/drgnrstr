@@ -17,6 +17,7 @@ public class Testing{
         System.out.println("Time is " +ev.time());
         System.out.println("Individual is " + ev.individual());
         System.out.println(ev.toString());
+        //Event ev2 = new Event('u', 10.001, john); To test proper implementation of precondition
 
 
         City by = new City( "Frede" , 1.01, 4.04);

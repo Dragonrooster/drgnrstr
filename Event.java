@@ -14,8 +14,17 @@ public class Event{
     private Individual i;
 
 
-    //Constructor for events taking a type, timestamp and the individual affected
+    //Constructor for events taking a type, timestamp and the individual affected with preconditions for timeStamp and type
     Event(char e, double timeStamp, Individual i){
+
+        if( e != this.MUTATION && e != this.REPRODUCTION && e != this.DEATH){
+            throw new IllegalArgumentException("Invalid event type: " + e);
+        }
+
+        if( timeStamp < 0 ){
+            throw new IllegalArgumentException("Timestamps must be positive");
+        }
+
         this.e = e;
         this.timeStamp = timeStamp;
         this.i = i;
